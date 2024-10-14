@@ -5,6 +5,7 @@ import QuizPopup from "../components/QuizPopup";
 import { Link } from "react-router-dom";
 import FirstPage from "../components/FirstPage"; // Going into the 'components' folder
 import AyushCards from "../components/AyushCards";
+import Navbar from "../components/Navbar";
 
 function Home() {
   // State to handle filter panel visibility
@@ -80,7 +81,7 @@ function Home() {
   // Plant data
   const plants = [
     {
-      imageSrc: "/images/tulsi.png",
+      imageSrc: "images/Basil - Holy.jpg",
       multimedia: [
         "/images/tulsi2.png",
         "/images/tulsi3.png",
@@ -102,7 +103,7 @@ function Home() {
       audioSrc: "/audio/tulsi.mp3",
     },
     {
-      imageSrc: "/images/neem.png",
+      imageSrc: "images/neemtree.jpg",
       multimedia: [
         "/images/neem2.png",
         "/images/neem3.png",
@@ -124,7 +125,7 @@ function Home() {
       audioSrc: "/audio/neem.mp3",
     },
     {
-      imageSrc: "/images/aloevera.png",
+      imageSrc: "images/aloevera.jpg",
       multimedia: [
         "/images/aloevera2.png",
         "/images/aloevera3.png",
@@ -142,7 +143,7 @@ function Home() {
       audioSrc: "/audio/aloe vera.mp3",
     },
     {
-      imageSrc: "/images/lavender.png",
+      imageSrc: "images/lavender.jpg",
       multimedia: [
         "/images/lavender2.png",
         "/images/lavender3.png",
@@ -160,7 +161,7 @@ function Home() {
       audioSrc: "/audio/lavender.mp3",
     },
     {
-      imageSrc: "/images/sage.png",
+      imageSrc: "images/sage.jpg",
       multimedia: [
         "/images/sage2.png",
         "/images/sage3.png",
@@ -178,7 +179,7 @@ function Home() {
       audioSrc: "/audio/sage.mp3",
     },
     {
-      imageSrc: "/images/cactus.png",
+      imageSrc: "images/cactus.jpg",
       multimedia: [
         "/images/cactus2.png",
         "/images/cactus3.png",
@@ -196,7 +197,7 @@ function Home() {
       audioSrc: "/audio/cactus.mp3",
     },
     {
-      imageSrc: "/images/dandelions.png",
+      imageSrc: "images/dandelions.jpg",
       multimedia: [
         "/images/dandelion2.png",
         "/images/dandelion3.png",
@@ -214,7 +215,7 @@ function Home() {
       audioSrc: "/audio/dandelion.mp3",
     },
     {
-      imageSrc: "/images/eucalyptus.png",
+      imageSrc: "images/eucalyptus.jpg",
       multimedia: [
         "/images/eucalyptus2.png",
         "/images/eucalyptus3.png",
@@ -232,7 +233,7 @@ function Home() {
       audioSrc: "/audio/ecualypus.mp3",
     },
     {
-      imageSrc: "/images/hibiscus.png",
+      imageSrc: "images/Hibiscus.jpg",
       multimedia: [
         "/images/hibiscus2.png",
         "/images/hibiscus2.png",
@@ -250,7 +251,7 @@ function Home() {
       audioSrc: "/audio/hibiscuis.mp3",
     },
     {
-      imageSrc: "/images/rosemary.png",
+      imageSrc: "images/ROSEMARY.jpg",
       multimedia: [
         "/images/rosemary2.png",
         "/images/rosemary3.png",
@@ -290,7 +291,7 @@ function Home() {
       audioSrc: "/audio/ashwaganda.mp3",
     },
     {
-      imageSrc: "/images/ginger.png",
+      imageSrc: "images/ginger.jpg",
       multimedia: [
         "/images/ginger2.png",
         "/images/ginger3.png",
@@ -385,16 +386,17 @@ function Home() {
 
   return (
     <>
-      <div className="font-poppins scrollbar-thin">
+      <Navbar />
+      <div className="font-poppins scrollbar-thin bg-gradient-to-br from-emerald-900 via-teal-800 to-green-700 text-white min-h-screen">
         {/* Navbar */}
-        <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-30">
+        <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-30 bg-gradient-to-r from-green-700 via-green-600 to-teal-500">
           <div className="container mx-auto flex items-center py-4 px-8">
             {/* Logo */}
             <div className="flex-shrink-0 text-black text-2xl font-semibold">
               <img
-                src="/images/AYURB.png"
+                src="\images\logo-color.png"
                 alt="AYURB Logo"
-                className="h-10 ml-5"
+                className="h-16 ml-5 w-48 rounded-full"
               />
             </div>
 
@@ -402,33 +404,38 @@ function Home() {
             <div className="flex-grow flex justify-center space-x-8">
               <Link
                 to="/"
-                className="pb-1 text-navbar-text border-b-2 border-transparent hover:border-sub-color hover:text-sub-color transition-colors duration-200"
+                className="pb-1 text-white relative group transition-colors duration-200"
               >
                 Home
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
               <Link
                 to="/login"
-                className="pb-1 text-navbar-text border-b-2 border-transparent hover:border-sub-color hover:text-sub-color transition-colors duration-200"
+                className="pb-1 text-white relative group transition-colors duration-200"
               >
                 Login
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
               <Link
                 to="/register"
-                className="pb-1 text-navbar-text border-b-2 border-transparent hover:border-sub-color hover:text-sub-color transition-colors duration-200"
+                className="pb-1 text-white relative group transition-colors duration-200"
               >
                 Register
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
               <Link
                 to="/health-wellness"
-                className="pb-1 text-navbar-text border-b-2 border-transparent hover:border-sub-color hover:text-sub-color transition-colors duration-200"
+                className="pb-1 text-white relative group transition-colors duration-200"
               >
                 Health
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
               <button
                 onClick={handleShowBookmarks}
-                className="pb-1 text-navbar-text border-b-2 border-transparent hover:border-sub-color hover:text-sub-color transition-colors duration-200"
+                className="pb-1 text-white relative group transition-colors duration-200"
               >
                 Bookmarks
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </button>
             </div>
 
@@ -469,8 +476,9 @@ function Home() {
 
         {/* Filter Slider (Fixed with Transparency and Blur Effect) */}
         <div
-          className={`fixed top-16 z-20 left-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-lg transform transition-transform duration-300 ease-in-out ${isFilterOpen ? "translate-y-0" : "-translate-y-full"
-            }`}
+          className={`fixed top-16 z-20 left-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-lg transform transition-transform duration-300 ease-in-out ${
+            isFilterOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
         >
           <div className="flex flex-wrap px-8 py-4">
             {/* Filter by Region */}
@@ -524,12 +532,13 @@ function Home() {
 
         {/* Plant Cards or Bookmarked Plants */}
         <div
-          className="container mx-auto mt-12 px-8 py-10 shadow-lg"
+          className="container mx-auto mt-12 px-8 py-10 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg"
           ref={plantCardsRef}
         >
+          <h2 className="text-3xl font-bold mb-6 text-white">Explore Plants</h2>
           {showBookmarks ? (
             <>
-              {bookmarks.length > 0 ? ( // Check if there are any bookmarks
+              {bookmarks.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                   {/* Show bookmarked plants */}
                   {plants
@@ -550,7 +559,7 @@ function Home() {
                     ))}
                 </div>
               ) : (
-                <p className="text-center text-gray-500">NO BOOKMARKS SAVED</p> // Show "NO BOOKMARKS SAVED" if no bookmarks exist
+                <p className="text-center text-white">NO BOOKMARKS SAVED</p>
               )}
             </>
           ) : (
@@ -571,218 +580,222 @@ function Home() {
             </div>
           )}
         </div>
-      </div>
 
-      {/* Popup content with dynamic 3D model and description */}
-      {isPopupOpen && selectedPlant && (
-        <div className="fixed inset-0 flex items-center justify-center z-40 bg-black bg-opacity-50">
-          <div className="bg-sec-color rounded-lg p-8 w-4/5 max-w-4xl overflow-y-auto relative">
-            {/* Close Button */}
-            <button
-              onClick={closePopup}
-              className="absolute top-2 right-2 text-3xl font-medium text-gray-600 hover:text-red-500"
-            >
-              &times;
-            </button>
+        <AyushCards />
 
-            {/* Popup Content */}
-            <div className=" grid grid-cols-2 grid-rows-2 gap-4">
-              {/* Left side: 3D Model and Multimedia */}
-              <div className="row-span-1">
-                <iframe
-                  title={selectedPlant.name}
-                  src={selectedPlant.sketchfabModelUrl}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="w-full h-72 rounded-lg"
-                ></iframe>
-              </div>
-
-              {/* Plant Info and Audio Wrapper */}
-              <div
-                className=" row-span-1 ml-4 leading-8"
-                style={{ maxHeight: "310px", overflowY: "hidden" }}
+        {/* Popup content with dynamic 3D model and description */}
+        {isPopupOpen && selectedPlant && (
+          <div className="fixed inset-0 flex items-center justify-center z-40 bg-black bg-opacity-50">
+            <div className="bg-sec-color rounded-lg p-8 w-4/5 max-w-4xl overflow-y-auto relative">
+              {/* Close Button */}
+              <button
+                onClick={closePopup}
+                className="absolute top-2 right-2 text-3xl font-medium text-gray-600 hover:text-red-500"
               >
-                {/* Right side: Plant Info */}
-                <div className="overflow-y-auto" style={{ maxHeight: "235px" }}>
-                  <h2 className="text-xl font-semibold mb-2">
-                    {selectedPlant.name}
-                  </h2>
-                  <p className="mt-4 text-lg">{selectedPlant.description}</p>
-                  <div className="mt-4">
-                    <p>
-                      <b>Region:</b> {selectedPlant.region}
-                    </p>
-                    <p>
-                      <b>Type:</b> {selectedPlant.type}
-                    </p>
-                    <p>
-                      <b>Habitat:</b> {selectedPlant.habitat}
-                    </p>
-                    <p>
-                      <b>Botanical Name:</b> {selectedPlant.botname}
-                    </p>
-                    <p>
-                      <b>Common Names:</b> {selectedPlant.comnames}
-                    </p>
-                    <p>
-                      <b>Medicinal Uses:</b> {selectedPlant.meduses}
-                    </p>
-                    <p>
-                      <b>Methods of Cultivation:</b> {selectedPlant.methofcul}
-                    </p>
-                    {/* Add more plant information here */}
+                &times;
+              </button>
+
+              {/* Popup Content */}
+              <div className=" grid grid-cols-2 grid-rows-2 gap-4">
+                {/* Left side: 3D Model and Multimedia */}
+                <div className="row-span-1">
+                  <iframe
+                    title={selectedPlant.name}
+                    src={selectedPlant.sketchfabModelUrl}
+                    frameBorder="0"
+                    allowFullScreen
+                    className="w-full h-72 rounded-lg"
+                  ></iframe>
+                </div>
+
+                {/* Plant Info and Audio Wrapper */}
+                <div
+                  className=" row-span-1 ml-4 leading-8"
+                  style={{ maxHeight: "310px", overflowY: "hidden" }}
+                >
+                  {/* Right side: Plant Info */}
+                  <div
+                    className="overflow-y-auto"
+                    style={{ maxHeight: "235px" }}
+                  >
+                    <h2 className="text-xl font-semibold mb-2">
+                      {selectedPlant.name}
+                    </h2>
+                    <p className="mt-4 text-lg">{selectedPlant.description}</p>
+                    <div className="mt-4">
+                      <p>
+                        <b>Region:</b> {selectedPlant.region}
+                      </p>
+                      <p>
+                        <b>Type:</b> {selectedPlant.type}
+                      </p>
+                      <p>
+                        <b>Habitat:</b> {selectedPlant.habitat}
+                      </p>
+                      <p>
+                        <b>Botanical Name:</b> {selectedPlant.botname}
+                      </p>
+                      <p>
+                        <b>Common Names:</b> {selectedPlant.comnames}
+                      </p>
+                      <p>
+                        <b>Medicinal Uses:</b> {selectedPlant.meduses}
+                      </p>
+                      <p>
+                        <b>Methods of Cultivation:</b> {selectedPlant.methofcul}
+                      </p>
+                      {/* Add more plant information here */}
+                    </div>
+                  </div>
+
+                  {/* Audio Player: Positioned below the plant info section */}
+                  <div className="mt-2">
+                    <audio
+                      ref={audioRef}
+                      src={selectedPlant.audioSrc} // Use the selected plant's audio source
+                      controls // Adds the default browser audio controls
+                      className="w-full bg-gray-100 rounded-full" // Adjust width and styling as needed
+                    >
+                      Your browser does not support the audio element.
+                    </audio>
                   </div>
                 </div>
 
-                {/* Audio Player: Positioned below the plant info section */}
-                <div className="mt-2">
-                  <audio
-                    ref={audioRef}
-                    src={selectedPlant.audioSrc} // Use the selected plant's audio source
-                    controls // Adds the default browser audio controls
-                    className="w-full bg-gray-100 rounded-full" // Adjust width and styling as needed
-                  >
-                    Your browser does not support the audio element.
-                  </audio>
+                {/* Section 3: Multimedia (Bottom Left) */}
+                <div className="row-span-1 mt-5 relative">
+                  {/* Conditionally render image or video */}
+                  {selectedPlant && selectedPlant.multimedia && (
+                    <>
+                      {selectedPlant.multimedia[
+                        currentMultimediaIndex
+                      ].includes("youtube.com") ? (
+                        // If it's a YouTube video
+                        <iframe
+                          className="h-64 object-cover w-full rounded-lg"
+                          src={selectedPlant.multimedia[currentMultimediaIndex]}
+                          frameBorder="0"
+                          allowFullScreen
+                          title="Video"
+                        ></iframe>
+                      ) : (
+                        // If it's an image
+                        <img
+                          src={selectedPlant.multimedia[currentMultimediaIndex]}
+                          alt={selectedPlant.name}
+                          className="h-64 object-cover w-full rounded-lg"
+                        />
+                      )}
+
+                      {/* Left Arrow Button */}
+                      <button
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-600 hover:bg-gray-300 p-2 rounded-full"
+                        onClick={handlePreviousMultimedia}
+                      >
+                        <i className="fas fa-chevron-left"></i>
+                      </button>
+
+                      {/* Right Arrow Button */}
+                      <button
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-600 hover:bg-gray-300 p-2 rounded-full"
+                        onClick={handleNextMultimedia}
+                      >
+                        <i className="fas fa-chevron-right"></i>
+                      </button>
+                    </>
+                  )}
                 </div>
-              </div>
 
-              {/* Section 3: Multimedia (Bottom Left) */}
-              <div className="row-span-1 mt-5 relative">
-                {/* Conditionally render image or video */}
-                {selectedPlant && selectedPlant.multimedia && (
-                  <>
-                    {selectedPlant.multimedia[currentMultimediaIndex].includes(
-                      "youtube.com"
-                    ) ? (
-                      // If it's a YouTube video
-                      <iframe
-                        className="h-64 object-cover w-full rounded-lg"
-                        src={selectedPlant.multimedia[currentMultimediaIndex]}
-                        frameBorder="0"
-                        allowFullScreen
-                        title="Video"
-                      ></iframe>
-                    ) : (
-                      // If it's an image
-                      <img
-                        src={selectedPlant.multimedia[currentMultimediaIndex]}
-                        alt={selectedPlant.name}
-                        className="h-64 object-cover w-full rounded-lg"
-                      />
-                    )}
+                {/* Section 4: Notes */}
+                <div className="row-span-1 p-4 mt-5">
+                  <h3 className="text-xl font-semibold mb-5">Notes :</h3>
+                  <textarea
+                    id="notes-textarea"
+                    rows="5"
+                    className="w-full p-2 border rounded-md"
+                    placeholder="Write your notes here..."
+                  ></textarea>
 
-                    {/* Left Arrow Button */}
+                  {/* Flex container for buttons and audio player */}
+                  <div className="flex items-center mt-2">
+                    {/* Download Button */}
                     <button
-                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-600 hover:bg-gray-300 p-2 rounded-full"
-                      onClick={handlePreviousMultimedia}
+                      className="text-sm px-4 py-2 bg-main-color text-white rounded hover:bg-sub-color transition-colors duration-200"
+                      onClick={handleDownloadNotes}
                     >
-                      <i className="fas fa-chevron-left"></i>
+                      <i className="fa-solid fa-download mr-2"></i>
+                      Download
                     </button>
 
-                    {/* Right Arrow Button */}
+                    {/* Share Button */}
                     <button
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-600 hover:bg-gray-300 p-2 rounded-full"
-                      onClick={handleNextMultimedia}
+                      className="text-sm px-4 py-2 bg-main-color text-white rounded ml-2 hover:bg-sub-color transition-colors duration-200"
+                      onClick={handleShareNotes}
                     >
-                      <i className="fas fa-chevron-right"></i>
+                      <i className="fa-solid fa-share mr-2"></i>
+                      Share
                     </button>
-                  </>
-                )}
-              </div>
 
-              {/* Section 4: Notes */}
-              <div className="row-span-1 p-4 mt-5">
-                <h3 className="text-xl font-semibold mb-5">Notes :</h3>
-                <textarea
-                  id="notes-textarea"
-                  rows="5"
-                  className="w-full p-2 border rounded-md"
-                  placeholder="Write your notes here..."
-                ></textarea>
-
-                {/* Flex container for buttons and audio player */}
-                <div className="flex items-center mt-2">
-                  {/* Download Button */}
-                  <button
-                    className="text-sm px-4 py-2 bg-main-color text-white rounded hover:bg-sub-color transition-colors duration-200"
-                    onClick={handleDownloadNotes}
-                  >
-                    <i className="fa-solid fa-download mr-2"></i>
-                    Download
-                  </button>
-
-                  {/* Share Button */}
-                  <button
-                    className="text-sm px-4 py-2 bg-main-color text-white rounded ml-2 hover:bg-sub-color transition-colors duration-200"
-                    onClick={handleShareNotes}
-                  >
-                    <i className="fa-solid fa-share mr-2"></i>
-                    Share
-                  </button>
-
-                  {/* Comment Button */}
-                  <button className="text-sm px-4 py-2 bg-main-color text-white rounded ml-2 hover:bg-sub-color transition-colors duration-200">
-                    <i class="fa-regular fa-comment mr-2"></i>
-                    Comment
-                  </button>
+                    {/* Comment Button */}
+                    <button className="text-sm px-4 py-2 bg-main-color text-white rounded ml-2 hover:bg-sub-color transition-colors duration-200">
+                      <i class="fa-regular fa-comment mr-2"></i>
+                      Comment
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
-
-      <AyushCards />
-
-      {/* Chatbot Button and Iframe */}
-      <div className="fixed bottom-4 right-4 z-50">
-        {/* Chatbot Toggle Button */}
-        <button
-          onClick={toggleChatbot1}
-          className={`bg-main-color text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300 flex items-center justify-center ${showChatbot ? "hidden" : ""
-            }`}
-          style={{ width: "50px", height: "50px" }} // Adjust the button size
-        >
-          <span className="material-icons" style={{ fontSize: "28px" }}>
-            chat
-          </span>{" "}
-          {/* Adjust icon size */}
-        </button>
-
-        {/* Chatbot Iframe */}
-        {showChatbot && (
-          <div className="relative">
-            <iframe
-              width="350"
-              height="430"
-              allow="microphone;"
-              src="https://console.dialogflow.com/api-client/demo/embedded/501ea8ff-d991-47ee-90f1-faaa49b0963f"
-              className="border border-gray-300 rounded-lg shadow-lg"
-              style={{ zIndex: 9999 }}
-            ></iframe>
-            <button
-              onClick={toggleChatbot}
-              className="absolute top-2 right-2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300"
-              style={{ zIndex: 10000 }}
-            >
-              <span
-                className="material-icons"
-                style={{ width: "20px", height: "5px" }}
-              >
-                close
-              </span>{" "}
-              {/* Adjust close icon size */}
-            </button>
-          </div>
         )}
+
+        {/* Chatbot Button and Iframe */}
+        <div className="fixed bottom-4 right-4 z-50">
+          {/* Chatbot Toggle Button */}
+          <button
+            onClick={toggleChatbot1}
+            className={`bg-main-color text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300 flex items-center justify-center ${
+              showChatbot ? "hidden" : ""
+            }`}
+            style={{ width: "50px", height: "50px" }} // Adjust the button size
+          >
+            <span className="material-icons" style={{ fontSize: "28px" }}>
+              chat
+            </span>{" "}
+            {/* Adjust icon size */}
+          </button>
+
+          {/* Chatbot Iframe */}
+          {showChatbot && (
+            <div className="relative">
+              <iframe
+                width="350"
+                height="430"
+                allow="microphone;"
+                src="https://console.dialogflow.com/api-client/demo/embedded/501ea8ff-d991-47ee-90f1-faaa49b0963f"
+                className="border border-gray-300 rounded-lg shadow-lg"
+                style={{ zIndex: 9999 }}
+              ></iframe>
+              <button
+                onClick={toggleChatbot}
+                className="absolute top-2 right-2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300"
+                style={{ zIndex: 10000 }}
+              >
+                <span
+                  className="material-icons"
+                  style={{ width: "20px", height: "5px" }}
+                >
+                  close
+                </span>{" "}
+                {/* Adjust close icon size */}
+              </button>
+            </div>
+          )}
+        </div>
+
+        <Footer />
+
+        {/* Quiz Popup */}
+        <QuizPopup isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
       </div>
-
-      <Footer />
-
-      {/* Quiz Popup */}
-      <QuizPopup isOpen={isQuizOpen} onClose={() => setIsQuizOpen(false)} />
     </>
   );
 }

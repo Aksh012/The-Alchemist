@@ -11,7 +11,7 @@ const PlantCard = ({ imageSrc, name, type, onBookmarkToggle, isBookmarked, onLea
       {/* Plant Name and Type */}
       <div className="p-4 pt-1 bg-sec-color text-center">
         <h3 className="text-2xl font-semibold text-gray-800 text-left">{name}</h3>
-        <p className="text-xs text-gray-500 text-left">{type}</p>
+        <p className="text-xs text-white text-left">{type}</p>
       </div>
 
       {/* Card Footer with Icons */}

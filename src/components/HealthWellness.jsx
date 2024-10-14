@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 const categories = [
   {
     name: "Skin Care",
-    imageUrl: "/images/skincare.png",
+    imageUrl: "images/skincare.jpg",
     plants: ["Aloe Vera", "Neem", "Turmeric", "Tulsi"],
     bgColor: "bg-green-100",
     textColor: "text-green-800",

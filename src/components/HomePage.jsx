@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const HomePage = ({ onGetStartedClick }) => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen text-white">
       <div className="h-screen bg-sec-color m-16 p-10 shadow-lg rounded-lg flex space-x-8">
         {/* Text Section */}
         <div className="mt-40 ml-20 flex flex-col w-6/12">
-          <h1 className="leading-tight mb-12 text-5xl text-main-color font-bold">
+          <h1 className="leading-tight mb-12 text-5xl  font-bold">
             Step Into Nature's Pharmacy: Your Virtual Herbal Haven
           </h1>
-          <p className="text-gray-600 text-xl">
+          <p className="text-black text-xl">
             Explore a world of traditional healing with our curated collection
             of medicinal plants. Unveil the ancient wisdom of AYUSH and embrace
             the natural way to well-being.
@@ -38,4 +38,4 @@ const HomePage = ({ onGetStartedClick }) => {
   );
 };
 
-export default HomePage
+export default HomePage;
