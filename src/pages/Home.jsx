@@ -586,7 +586,7 @@ function Home() {
         {/* Popup content with dynamic 3D model and description */}
         {isPopupOpen && selectedPlant && (
           <div className="fixed inset-0 flex items-center justify-center z-40 bg-black bg-opacity-50">
-            <div className="bg-sec-color rounded-lg p-8 w-4/5 max-w-4xl overflow-y-auto relative">
+            <div className="bg-white text-black rounded-lg p-8 w-4/5 max-w-4xl overflow-y-auto relative">
               {/* Close Button */}
               <button
                 onClick={closePopup}
