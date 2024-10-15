@@ -83,8 +83,8 @@ const QuizPopup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-40 bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-lg mx-4 sm:mx-0 relative max-h-[80vh] overflow-auto">
+    <div className="fixed inset-0 flex items-center justify-center z-40 bg-black bg-opacity-70">
+      <div className="bg-white rounded-lg p-6 w-full max-w-lg mx-4 sm:mx-0 relative max-h-[80vh] overflow-auto shadow-lg">
         <button
           onClick={handleClose}
           className="absolute top-2 right-2 text-3xl font-medium text-gray-600 hover:text-red-500"
@@ -95,8 +95,8 @@ const QuizPopup = ({ isOpen, onClose }) => {
         <div>
           {isQuizComplete ? (
             <div>
-              <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
-              <p className="mb-4">Your score: {calculateScore()} / {questions.length}</p>
+              <h2 className="text-2xl font-bold mb-4 text-green-600">Quiz Completed!</h2>
+              <p className="mb-4">Your score: <span className="font-semibold text-blue-600">{calculateScore()} / {questions.length}</span></p>
               <p className="mb-4">Your answers:</p>
               <ul className="list-disc pl-5">
                 {questions.map((q, index) => {
@@ -114,20 +114,20 @@ const QuizPopup = ({ isOpen, onClose }) => {
               </ul>
               <button
                 onClick={handleClose}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200"
               >
                 Close
               </button>
             </div>
           ) : (
             <div>
-              <h2 className="text-2xl font-bold mb-4">{questions[currentQuestion].question}</h2>
+              <h2 className="text-2xl font-bold mb-4 text-green-600">{questions[currentQuestion].question}</h2>
               <div className="mt-4">
                 {questions[currentQuestion].options.map((option, index) => (
                   <button
                     key={index}
                     onClick={() => handleAnswer(option)}
-                    className="block w-full px-4 py-2 mb-2 text-left bg-gray-100 border border-gray-300 rounded hover:bg-gray-200"
+                    className="block w-full px-4 py-2 mb-2 text-left bg-gray-200 border border-gray-300 rounded hover:bg-gray-300 transition duration-200 text-black"
                   >
                     {option}
                   </button>
