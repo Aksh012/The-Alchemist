@@ -1,5 +1,6 @@
 const express = require('express')
 const { MongoClient } = require('mongodb')
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken')
@@ -45,6 +46,30 @@ app.post('/api/remedies', async (req, res) => {
     }
   });
 
+  app.post('/bookmarks', async (req, res) => {
+    const { name, userId } = req.body;
+    try {
+      const newBookmark = new Bookmark({ name, userId });
+      await newBookmark.save();
+      res.status(201).json(newBookmark);
+    } catch (error) {
+      console.error('Error adding bookmark:', error);
+      res.status(400).json({ error: error.message });
+    }
+  });
+
+  app.get('/bookmarks/:userId', async (req, res) => {
+    const { userId } = req.params;
+    try {
+      const bookmarks = await Bookmark.find({ userId });
+      res.status(200).json(bookmarks);
+    } catch (error) {
+      console.error('Error fetching bookmarks:', error);
+      res.status(400).json({ error: error.message });
+    }
+  });
+
+  
 
 
 
