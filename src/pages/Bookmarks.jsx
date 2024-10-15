@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Bookmarks = ({ bookmarks }) => {
-    return (
-        <div className="container mx-auto p-4 pt-36">
-            <h1 className="text-2xl font-bold mb-4">Your Bookmarks</h1>
-            {bookmarks.length === 0 ? (
-                <p>No bookmarks yet!</p>
-            ) : (
-                <ul className="list-disc pl-5">
-                    {bookmarks.map((bookmark, index) => (
-                        <li key={index} className="mb-2">
-                            <a href={bookmark.link} className="text-blue-500 underline">
-                                {bookmark.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+const Bookmarks = () => {
+  const [bookmarks, setBookmarks] = useState([]);
+  const userId = 'USER_ID'; // Replace with the actual user ID from your authentication system
+
+  useEffect(() => {
+    const fetchBookmarks = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/bookmarks/${userId}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch bookmarks');
+        }
+        const data = await response.json();
+        setBookmarks(data);
+      } catch (error) {
+        console.error('Error fetching bookmarks:', error.message);
+      }
+    };
+
+    fetchBookmarks();
+  }, [userId]);
+
+  return (
+    <div>
+      <h1>Your Bookmarks</h1>
+      <ul>
+        {bookmarks.map((bookmark) => (
+          <li key={bookmark._id}>{bookmark.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
-export default Bookmarks;
+export default  Bookmarks;
