@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar({ handleShowBookmarks }) {
+  
   return (
     <nav className="bg-gradient-to-r from-green-700 via-green-600 to-teal-500 shadow-lg fixed top-0 left-0 w-full z-30">
       <div className="container mx-auto flex items-center py-4 px-8">
@@ -50,6 +51,13 @@ function Navbar({ handleShowBookmarks }) {
             className="pb-1 text-white hover:text-green-100 transition-colors duration-200 relative group"
           >
             Bookmark
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+          </Link>
+          <Link
+            to="/remedies"
+            className="pb-1 text-white hover:text-green-100 transition-colors duration-200 relative group"
+          >
+            Remedies
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
           </Link>
         </div>

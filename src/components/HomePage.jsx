@@ -9,7 +9,7 @@ const HomePage = ({ onGetStartedClick }) => {
           <h1 className="leading-tight mb-12 text-5xl  font-bold">
             Step Into Nature's Pharmacy: Your Virtual Herbal Haven
           </h1>
-          <p className="text-black text-xl">
+          <p className="text-white text-xl">
             Explore a world of traditional healing with our curated collection
             of medicinal plants. Unveil the ancient wisdom of AYUSH and embrace
             the natural way to well-being.

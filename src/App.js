@@ -9,6 +9,8 @@ import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute"; // Component for protected routes
 import "./styles/global.css";
+import RemediesPage from "./components/RemediesPage";
+import Bookmarks from "./pages/Bookmarks";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/ar" element={<ARPage />} /> {/* AR Page */}
           <Route path="/about" element={<AboutPage />} /> {/* About Page */}
           <Route path="/health-wellness" element={<HealthWellness />} />
+          <Route path="/remedies" element={<RemediesPage />} />
+
           {/* Authentication routes */}
           <Route path="/login" element={<Login />} /> {/* Login Page */}
           <Route path="/register" element={<Register />} />{" "}
